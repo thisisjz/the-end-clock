@@ -5,97 +5,97 @@
 export const CLOCKS = [
   {
     id: "clock-1",
-    name: "Clock 01",
+    name: "ONE",
     price: 11.11,
-    description: "The first hour: quiet, minimal, and calm.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-1-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID1:1"
   },
   {
     id: "clock-2",
-    name: "Clock 02",
+    name: "TWO",
     price: 22.22,
-    description: "Soft gradients for a slow, drifting hour.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-2-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID2:1"
   },
   {
     id: "clock-3",
-    name: "Clock 03",
+    name: "THREE",
     price: 33.33,
-    description: "Hints of movement as the night deepens.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-3-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID3:1"
   },
   {
     id: "clock-4",
-    name: "Clock 04",
+    name: "FOUR",
     price: 44.44,
-    description: "A liminal hour, still and spacious.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-4-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID4:1"
   },
   {
     id: "clock-5",
-    name: "Clock 05",
+    name: "FIVE",
     price: 55.55,
-    description: "Edges sharpen as the sky just begins to think of light.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-5-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID5:1"
   },
   {
     id: "clock-6",
-    name: "Clock 06",
+    name: "SIX",
     price: 66.66,
-    description: "Dawn hints, with a gentle warmth creeping in.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-6-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID6:1"
   },
   {
     id: "clock-7",
-    name: "Clock 07",
+    name: "SEVEN",
     price: 77.77,
-    description: "The day opens: brighter, bolder, more awake.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-7-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID7:1"
   },
   {
     id: "clock-8",
-    name: "Clock 08",
+    name: "EIGHT",
     price: 88.88,
-    description: "Clean lines and clarity for the working hour.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-8-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID8:1"
   },
   {
     id: "clock-9",
-    name: "Clock 09",
+    name: "NINE",
     price: 99.99,
-    description: "Confident shapes; the day in full motion.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-9-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID9:1"
   },
   {
     id: "clock-10",
-    name: "Clock 10",
+    name: "TEN",
     price: 100.100,
-    description: "The hour stretches: balanced, steady, precise.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-10-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID10:1"
   },
   {
     id: "clock-11",
-    name: "Clock 11",
+    name: "ELEVEN",
     price: 110.11,
-    description: "Shadows lengthen; colour starts to deepen again.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-11-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID11:1"
   },
   {
     id: "clock-12",
-    name: "Clock 12",
+    name: "TWELVE",
     price: 112.12,
-    description: "The final hour: saturated, reflective, a closing gesture.",
+    description: "ONE, TWO, FUCK 'EM ALL.",
     faceImage: "images/clock-12-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID12:1"
   }
