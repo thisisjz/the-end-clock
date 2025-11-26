@@ -19,11 +19,43 @@
       </section>
 
       <section id="clock-section" class="clock-section hidden">
-        <img id="clock-image" class="clock-image" alt="Current clock" />
+        <div class="clock-visual">
+          <div class="clock-stack">
+            <!-- Face changes per clock -->
+            <img
+              id="clock-face-img"
+              class="clock-face-img"
+              src=""
+              alt="Clock face"
+            />
+
+            <!-- Shared hands (same images for all clocks) -->
+            <img
+              id="clock-hour-img"
+              class="clock-hand-img hand-hour"
+              src="images/clock-hour.png"
+              alt="Hour hand"
+            />
+            <img
+              id="clock-minute-img"
+              class="clock-hand-img hand-minute"
+              src="images/clock-minute.png"
+              alt="Minute hand"
+            />
+            <img
+              id="clock-second-img"
+              class="clock-hand-img hand-second"
+              src="images/clock-second.png"
+              alt="Second hand"
+            />
+          </div>
+        </div>
+
         <div class="clock-info">
           <h2 id="clock-name"></h2>
           <p id="clock-description" class="clock-description"></p>
           <p id="clock-price" class="clock-price"></p>
+
           <button id="buy-button" class="buy-button">Buy now</button>
           <p id="sold-out-label" class="sold-out hidden">Sold out</p>
         </div>

@@ -1,3 +1,5 @@
-// Event start time in Singapore (UTC+8)
-export const EVENT_START = new Date("2025-11-21T10:00:00+08:00");
+// Singapore time start
+export const EVENT_START = new Date("2025-11-26T12:00:00+08:00");
+
+// 12 hours = 12 clocks
 export const TOTAL_SLOTS = 12;

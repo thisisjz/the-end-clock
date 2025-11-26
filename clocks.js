@@ -1,99 +1,102 @@
+// clocks.js
+// 12 unique clocks, 1 per hour, sharing the same hand PNGs.
+// Only the faceImage + product info changes per clock.
+
 export const CLOCKS = [
   {
     id: "clock-1",
-    name: "Clock 1",
-    price: 11.11,
-    image: "images/clock-1.jpg",
-    description: "Description for Clock 1.",
+    name: "Clock 01",
+    price: 120,
+    description: "The first hour: quiet, minimal, and calm.",
+    faceImage: "images/clock-1-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID1:1"
   },
   {
     id: "clock-2",
-    name: "Clock 2",
-    price: 22.22,
-    image: "images/clock-2.jpg",
-    description: "Description for Clock 2.",
+    name: "Clock 02",
+    price: 120,
+    description: "Soft gradients for a slow, drifting hour.",
+    faceImage: "images/clock-2-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID2:1"
   },
   {
     id: "clock-3",
-    name: "Clock 3",
-    price: 33.33,
-    image: "images/clock-3.jpg",
-    description: "Description for Clock 3.",
+    name: "Clock 03",
+    price: 120,
+    description: "Hints of movement as the night deepens.",
+    faceImage: "images/clock-3-face.png",
     checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID3:1"
   },
   {
     id: "clock-4",
-    name: "Clock 4",
-    price: 44.44,
-    image: "images/clock-4.jpg",
-    description: "Description for Clock 4.",
-    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID1:1"
+    name: "Clock 04",
+    price: 120,
+    description: "A liminal hour, still and spacious.",
+    faceImage: "images/clock-4-face.png",
+    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID4:1"
   },
   {
     id: "clock-5",
-    name: "Clock 5",
-    price: 55.55,
-    image: "images/clock-5.jpg",
-    description: "Description for Clock 5.",
-    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID2:1"
+    name: "Clock 05",
+    price: 120,
+    description: "Edges sharpen as the sky just begins to think of light.",
+    faceImage: "images/clock-5-face.png",
+    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID5:1"
   },
   {
     id: "clock-6",
-    name: "Clock 6",
-    price: 66.66,
-    image: "images/clock-6.jpg",
-    description: "Description for Clock 6.",
-    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID3:1"
+    name: "Clock 06",
+    price: 120,
+    description: "Dawn hints, with a gentle warmth creeping in.",
+    faceImage: "images/clock-6-face.png",
+    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID6:1"
   },
   {
     id: "clock-7",
-    name: "Clock 7",
-    price: 77.77,
-    image: "images/clock-7.jpg",
-    description: "Description for Clock 7.",
-    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID1:1"
+    name: "Clock 07",
+    price: 120,
+    description: "The day opens: brighter, bolder, more awake.",
+    faceImage: "images/clock-7-face.png",
+    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID7:1"
   },
   {
     id: "clock-8",
-    name: "Clock 8",
-    price: 88.88,
-    image: "images/clock-8.jpg",
-    description: "Description for Clock 8.",
-    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID2:1"
+    name: "Clock 08",
+    price: 120,
+    description: "Clean lines and clarity for the working hour.",
+    faceImage: "images/clock-8-face.png",
+    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID8:1"
   },
   {
     id: "clock-9",
-    name: "Clock 9",
-    price: 99.99,
-    image: "images/clock-9.jpg",
-    description: "Description for Clock 9.",
-    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID3:1"
+    name: "Clock 09",
+    price: 120,
+    description: "Confident shapes; the day in full motion.",
+    faceImage: "images/clock-9-face.png",
+    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID9:1"
   },
   {
     id: "clock-10",
     name: "Clock 10",
-    price: 110.10,
-    image: "images/clock-10.jpg",
-    description: "Description for Clock 10.",
-    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID1:1"
+    price: 120,
+    description: "The hour stretches: balanced, steady, precise.",
+    faceImage: "images/clock-10-face.png",
+    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID10:1"
   },
   {
     id: "clock-11",
     name: "Clock 11",
-    price: 111.11,
-    image: "images/clock-2.jpg",
-    description: "Description for Clock 11.",
-    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID2:1"
+    price: 120,
+    description: "Shadows lengthen; colour starts to deepen again.",
+    faceImage: "images/clock-11-face.png",
+    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID11:1"
   },
   {
     id: "clock-12",
     name: "Clock 12",
-    price: 112.12,
-    image: "images/clock-12.jpg",
-    description: "Description for Clock 12.",
-    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID3:1"
-  },
-  
+    price: 120,
+    description: "The final hour: saturated, reflective, a closing gesture.",
+    faceImage: "images/clock-12-face.png",
+    checkoutUrl: "https://YOUR_STORE.myshopify.com/cart/VARIANTID12:1"
+  }
 ];
