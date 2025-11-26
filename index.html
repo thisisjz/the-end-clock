@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>12 Clocks / 12 Hours</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <h1>12 Clocks / 12 Hours</h1>
+        <p class="tagline">A new one-of-one clock every hour.</p>
+      </header>
+
+      <section class="status">
+        <p id="event-state"></p>
+        <p id="countdown"></p>
+      </section>
+
+      <section id="clock-section" class="clock-section hidden">
+        <img id="clock-image" class="clock-image" alt="Current clock" />
+        <div class="clock-info">
+          <h2 id="clock-name"></h2>
+          <p id="clock-description" class="clock-description"></p>
+          <p id="clock-price" class="clock-price"></p>
+          <button id="buy-button" class="buy-button">Buy now</button>
+          <p id="sold-out-label" class="sold-out hidden">Sold out</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small>All times in Singapore (UTC+8)</small>
+      </footer>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

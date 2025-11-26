@@ -1,0 +1,105 @@
+import { CLOCKS } from "./clocks.js";
+import { EVENT_START, TOTAL_SLOTS } from "./config.js";
+
+const eventStateEl = document.getElementById("event-state");
+const countdownEl = document.getElementById("countdown");
+const clockSectionEl = document.getElementById("clock-section");
+const clockImageEl = document.getElementById("clock-image");
+const clockNameEl = document.getElementById("clock-name");
+const clockDescriptionEl = document.getElementById("clock-description");
+const clockPriceEl = document.getElementById("clock-price");
+const buyButtonEl = document.getElementById("buy-button");
+const soldOutLabelEl = document.getElementById("sold-out-label");
+
+function getCurrentSlot(now = new Date()) {
+  const diffMs = now - EVENT_START;
+  const hourMs = 1000 * 60 * 60;
+
+  if (diffMs < 0) {
+    return { state: "before", slotIndex: null, clock: null };
+  }
+
+  const hoursPassed = Math.floor(diffMs / hourMs);
+
+  if (hoursPassed >= TOTAL_SLOTS) {
+    return { state: "after", slotIndex: null, clock: null };
+  }
+
+  const clock = CLOCKS[hoursPassed];
+  return { state: "active", slotIndex: hoursPassed, clock };
+}
+
+function formatDuration(ms) {
+  if (ms <= 0) return "00:00:00";
+  const totalSeconds = Math.floor(ms / 1000);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+}
+
+async function checkSoldOut(clockId) {
+  // Placeholder:
+  // In production, call your backend:
+  // const res = await fetch(`/api/sold-out?clockId=${clockId}`);
+  // const data = await res.json();
+  // return data.soldOut;
+  return false;
+}
+
+async function render() {
+  const now = new Date();
+  const { state, slotIndex, clock } = getCurrentSlot(now);
+
+  if (state === "before") {
+    eventStateEl.textContent = "The sale has not started yet.";
+    countdownEl.textContent = `Starts in ${formatDuration(EVENT_START - now)}`;
+    clockSectionEl.classList.add("hidden");
+    return;
+  }
+
+  if (state === "after") {
+    eventStateEl.textContent = "The 12-hour sale is over.";
+    countdownEl.textContent = "";
+    clockSectionEl.classList.add("hidden");
+    return;
+  }
+
+  // Active slot
+  clockSectionEl.classList.remove("hidden");
+
+  const slotStartMs = EVENT_START.getTime() + slotIndex * 60 * 60 * 1000;
+  const slotEndMs = slotStartMs + 60 * 60 * 1000;
+  const remainingMs = slotEndMs - now.getTime();
+
+  eventStateEl.textContent = `Now available: Clock ${slotIndex + 1} of ${TOTAL_SLOTS}`;
+  countdownEl.textContent = `Next clock in ${formatDuration(remainingMs)}`;
+
+  if (clock) {
+    clockImageEl.src = clock.image;
+    clockImageEl.alt = clock.name;
+    clockNameEl.textContent = clock.name;
+    clockDescriptionEl.textContent = clock.description;
+    clockPriceEl.textContent = `SGD ${clock.price.toFixed(2)}`;
+
+    const soldOut = await checkSoldOut(clock.id);
+
+    if (soldOut) {
+      buyButtonEl.classList.add("hidden");
+      soldOutLabelEl.classList.remove("hidden");
+    } else {
+      buyButtonEl.classList.remove("hidden");
+      soldOutLabelEl.classList.add("hidden");
+      buyButtonEl.onclick = () => {
+        window.location.href = clock.buyUrl;
+      };
+    }
+  }
+}
+
+// Initial render
+render();
+// Update every second so countdown feels alive
+setInterval(render, 1000);
